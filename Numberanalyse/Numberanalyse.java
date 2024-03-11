@@ -48,13 +48,16 @@ public class Numberanalyse{
 		}
 		
 		for(int i = 0; i < strings.size() - 1; i++){
-			if(checksum(strings.get(i)) == checksum(strings.get(i + 1))){
-				String a = strings.get(i);
-				String b = strings.get(i + 1);
-				strings.set(i, a + " " + b);
-				strings.remove(i + 1);
-				i--;
+			int check = checksum(strings.get(i));
+			while(true){
+				if(i + 1 < strings.size() && checksum(strings.get(i + 1)) == check){
+					String a = strings.get(i);
+					String b = strings.get(i + 1);
+					strings.set(i, a + " " + b);
+					strings.remove(i + 1);
+				}else break;
 			}
+			
 		}
 		
 		for(int i = 0; i < strings.size(); i++){

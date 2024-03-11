@@ -20,7 +20,6 @@ public class Applikation{
 			}catch(NumberFormatException e){
 				System.out.println("Keine gültige Nummer");
 				System.exit(1);
-				
 			}
 			
 			int limit = Integer.parseInt(input);

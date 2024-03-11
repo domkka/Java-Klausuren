@@ -1,6 +1,7 @@
-public interface isthoher{
+import java.util.*;
+
+public interface isthoher extends Comparable<isthoher>{
 	public int getHoehe();
 	public void setHoehe(int hoehe);
-	public int compareTo(Haus h);
 	public String toString();
 }

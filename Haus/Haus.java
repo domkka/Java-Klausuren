@@ -1,4 +1,6 @@
-public class Haus implements isthoher, Comparable<Haus>{
+import java.util.*;
+
+public class Haus implements isthoher{
 	String name;
 	int hoehe;
 	
@@ -15,7 +17,8 @@ public class Haus implements isthoher, Comparable<Haus>{
 		this.hoehe = hoehe;
 	}
 	
-	public int compareTo(Haus h){
+	@Override
+	public int compareTo(isthoher h){
 		if (this.getHoehe() > h.getHoehe()){
 			return 1;
 		}else if( this.getHoehe() < h.getHoehe()){
